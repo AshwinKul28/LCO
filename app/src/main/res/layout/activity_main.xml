@@ -73,5 +73,17 @@
         android:onClick="viewad"
         app:srcCompat="@drawable/ad" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20sp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Your guide for interview preparation"
+        android:textColor="#fff" />
+
 
 </RelativeLayout>

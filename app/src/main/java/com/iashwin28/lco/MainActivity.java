@@ -60,26 +60,48 @@ public class MainActivity extends AppCompatActivity {
 
     public void testpage(View v)
     {
-        EditText usr = (EditText)findViewById(R.id.username);
-        EditText pass = (EditText)findViewById(R.id.pwd);
-        if((usr.getText().toString().trim()).equals("admin") && (pass.getText().toString().trim()).equals("test1234")) {
-            Intent i = new Intent(MainActivity.this, MainScreen.class);
-            startActivity(i);
-            finish();
-        }
-        else
+
+
+        if(!isNetworkAvailable())
         {
             new SweetAlertDialog(MainActivity.this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
-                    .setTitleText("Incorrect credentials")
-                    .setContentText("Seems you've entered incorrect Username/Password")
-                    .setConfirmText("OK")
+                    .setTitleText("No Internet")
+                    .setContentText("Let's fix the satellites !")
+                    .setCustomImage(R.drawable.no_internet)
+                    .setConfirmText("FIX")
                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                         @Override
                         public void onClick(SweetAlertDialog sDialog) {
-                            sDialog.dismiss();
+
+                            Intent i = new Intent(Settings.ACTION_SETTINGS);
+                            // i.setClassName("com.android.phone","com.android.phone.NetworkSetting");
+                            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(i);
                         }
                     })
                     .show();
+        }
+        else {
+
+            EditText usr = (EditText) findViewById(R.id.username);
+            EditText pass = (EditText) findViewById(R.id.pwd);
+            if ((usr.getText().toString().trim()).equals("admin") && (pass.getText().toString().trim()).equals("test1234")) {
+                Intent i = new Intent(MainActivity.this, MainScreen.class);
+                startActivity(i);
+                finish();
+            } else {
+                new SweetAlertDialog(MainActivity.this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                        .setTitleText("Incorrect credentials")
+                        .setContentText("You've entered incorrect Username/Password")
+                        .setConfirmText("OK")
+                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                            @Override
+                            public void onClick(SweetAlertDialog sDialog) {
+                                sDialog.dismiss();
+                            }
+                        })
+                        .show();
+            }
         }
     }
 

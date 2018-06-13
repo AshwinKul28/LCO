@@ -45,6 +45,8 @@ public class SwipeAdapter extends BaseAdapter {
         TextView textViewCard = (TextView) convertView.findViewById(R.id.card_text);
         Log.d("abc","t="+questions.get(position).toString());
         textViewCard.setText(questions.get(position).toString());
+        TextView text_answer = (TextView) convertView.findViewById(R.id.card_answer);
+        text_answer.setText(answers.get(position).toString());
 
         return convertView;
     }

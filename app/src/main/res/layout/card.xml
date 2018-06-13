@@ -14,7 +14,10 @@
         android:id="@+id/card_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="40sp"
+        android:paddingBottom="15sp"
+        android:paddingTop="30sp"
+        android:paddingLeft="30sp"
+        android:paddingRight="30sp"
         android:text="xyz"
         android:textColor="#000"
         android:textSize="20sp"
@@ -23,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/card_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="10sp"
