@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Welcome to the LCO"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="48sp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="330dp"
+        android:layout_height="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="236dp"
+        android:background="@drawable/usrname"
+        android:ems="10"
+        android:fontFamily="@font/open_sans_semibold"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="330dp"
+        android:layout_height="50sp"
+        android:layout_below="@id/username"
+        android:layout_centerInParent="true"
+        android:background="@drawable/usrname"
+        android:ems="10"
+        android:layout_marginTop="30sp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_below="@id/pwd"
+        android:layout_marginTop="40sp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/open_sans_semibold"
+        android:onClick="testpage"
+        android:text="LOGIN"
+        android:textColor="#fff" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        android:onClick="viewad"
+        app:srcCompat="@drawable/ad" />
+
+
+</RelativeLayout>

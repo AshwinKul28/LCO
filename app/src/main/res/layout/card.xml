@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card"
+    android:id="@+id/relativeLayout2">
+
+
+
+    <TextView
+        android:id="@+id/card_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="40sp"
+        android:text="xyz"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10sp"
+        android:paddingLeft="30sp"
+        android:paddingRight="30sp"
+        android:text="A stack is a data structure in which only the top element can be accessed."
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_text" />
+</android.support.constraint.ConstraintLayout>
+
